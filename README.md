@@ -25,3 +25,9 @@ use `zip -FF` instead. However, this script is designed to
 be easily modifiable, so you can turn off some checks
 and try to use is for recovery too.
 
+playlistserver.py
+-----------------
+
+Simple server to serve music folders as playlists.
+When run from directory, it will serve its content as
+playlist, showing only files with appropriate extensions.
