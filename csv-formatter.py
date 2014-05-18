@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# csv-formater - format content of headered CSV file
+# csv-formatter - format content of headered CSV file
 # Copyright (C) 2013 Matej Kollar
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """ Example use:
-# cat companies.csv | csv-formater.py "%(Symbol)9s | %(P/E)7s | %(DividendYield)7s | %(PreviousClose)8s | %(Sector)20s | %(Industry)40s | %(Name)s"
+# cat companies.csv | csv-formatter.py "%(Symbol)9s | %(P/E)7s | %(DividendYield)7s | %(PreviousClose)8s | %(Sector)20s | %(Industry)40s | %(Name)s"
 """
 
 __author__ = "Matej Kollar"
