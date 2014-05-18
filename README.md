@@ -3,6 +3,14 @@ handy-python
 
 Some handy python code.
 
+csv-`*`.py
+----------
+
+Simple tools to work wwith CSV files with headers
+
+  * csv-formatter.py - format content of headered CSV file
+  * csv-sorter.py - format content of headered CSV file
+
 DebugWraper.py
 --------------
 
