@@ -3,8 +3,8 @@ handy-python
 
 Some handy python code.
 
-csv-`*`.py
-----------
+csv-*.py
+--------
 
 Simple tools to work wwith CSV files with headers
 
