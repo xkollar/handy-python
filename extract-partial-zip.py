@@ -141,13 +141,21 @@ def main(archive, outdir):
         if len(data) != hdr.usize:
             print "skipping (incomplete decoded data)"
             continue
+        if len(data) == 0:
+            continue
         try:
+            dirname = os.path.dirname(name)
+            if not os.path.exists(dirname):
+                os.makedirs(dirname)
             fd = open(name, 'wb')
             fd.write(data)
             fd.close()
         except IOError as e:
-            if e.errno == errno.EISDIR:
-                os.makedirs(name)
+            pass
+            # if e.errno in [errno.EISDIR, errno.ENOENT, errno.ENOTDIR]:
+            #     os.makedirs(name)
+            # else:
+            #     print "Unexpected error %s" % e.errno
         print "done"
     print "End of archive"
 
