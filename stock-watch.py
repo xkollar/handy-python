@@ -15,7 +15,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """ Example use:
-# stock-watch.py RHT GOOG MSFT
+# stock-watch.py RHT GOOG MSFT EURUSD=X
 """
 
 __author__ = "Matej Kollar"
@@ -35,20 +35,33 @@ import urllib2
 
 
 def term_color(c, s):
-    if sys.stdout.isatty():
+    if c is not None and sys.stdout.isatty():
         return "\033[38;5;%sm%s\033[m" % (c, s)
     else:
         return s
+
+
+def float_(s):
+    try:
+        return float(s)
+    except:
+        return float('NaN')
 
 
 def main(symbols):
     url = "https://download.finance.yahoo.com/d/quotes.csv?s=%s&f=sl1c1p2" % "+".join(symbols)
     reader = csv.reader(urllib2.urlopen(url))
     for line in reader:
-        color = 82
-        if line[3][0] == '-':
+        name = line[0]
+        price = float(line[1])
+        change = float_(line[2])
+        percent = float_(line[3][:-1]) # Remove percent sign
+        color = None
+        if change < 0:
             color = 196
-        print term_color(color, "{:<10} {:>5} {:>5} ({:>6})\033[m".format(*line))
+        elif change > 0:
+            color = 82
+        print term_color(color, "{:<10} {:>6.2f} {:>+6.2f} ({:>+.2f}%)\033[m".format(name, price, change, percent))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
