@@ -39,3 +39,9 @@ playlistserver.py
 Simple server to serve music folders as playlists.
 When run from directory, it will serve its content as
 playlist, showing only files with appropriate extensions.
+
+stock-watch.py
+--------------
+
+Script to retrieve and display information about
+given tickers. Data obtained from Yahoo.
