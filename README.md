@@ -31,7 +31,7 @@ Archive is not held in whole in memory, archived files though are
 In case you want to recover broken zip, you may prefer to
 use `zip -FF` instead. However, this script is designed to
 be easily modifiable, so you can turn off some checks
-and try to use is for recovery too.
+and try to use it for recovery too.
 
 playlistserver.py
 -----------------
