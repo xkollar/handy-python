@@ -45,3 +45,11 @@ stock-watch.py
 
 Script to retrieve and display information about
 given tickers. Data obtained from Yahoo.
+
+Example usage
+
+~~~
+clear; while :; do python stock-watch.py RHT MSFT GOOG EURUSD=X; read -t 3600; echo -n "========== "; date; done
+~~~
+
+Works nice with cron to get daily changes.
