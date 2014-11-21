@@ -55,7 +55,7 @@ def main(symbols):
         name = line[0]
         price = float(line[1])
         change = float_(line[2])
-        percent = float_(line[3][:-1]) # Remove percent sign
+        percent = float_(line[3][:-1])  # Remove percent sign
         color = None
         if change < 0:
             color = 196
