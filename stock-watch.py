@@ -61,7 +61,7 @@ def main(symbols):
             color = 196
         elif change > 0:
             color = 82
-        print term_color(color, "{:<10} {:>6.2f} {:>+6.2f} ({:>+.2f}%)\033[m".format(name, price, change, percent))
+        print term_color(color, "{:<10} {:>6.2f} {:>+6.2f} ({:>+.2f}%)".format(name, price, change, percent))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
