@@ -53,7 +53,7 @@ def main(symbols):
     reader = csv.reader(urllib2.urlopen(url))
     for line in reader:
         name = line[0]
-        price = float(line[1])
+        price = float_(line[1])
         change = float_(line[2])
         percent = float_(line[3][:-1])  # Remove percent sign
         color = None
