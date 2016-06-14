@@ -15,7 +15,8 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """ Example use:
-# cat companies.csv | csv-formatter.py "%(Symbol)9s | %(P/E)7s | %(DividendYield)7s | %(PreviousClose)8s | %(Sector)20s | %(Industry)40s | %(Name)s"
+# cat companies.csv \
+| csv-formatter.py "%(Symbol)9s | %(P/E)7s | %(DividendYield)7s"
 """
 
 __author__ = "Matej Kollar"

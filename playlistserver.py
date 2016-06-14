@@ -35,8 +35,8 @@ except ImportError:
 
 # class PlaylistHTTPServer(BaseHTTPServer.HTTPServer):
 class PlaylistHTTPServer(
-    SocketServer.ThreadingMixIn,
-    BaseHTTPServer.HTTPServer):
+        SocketServer.ThreadingMixIn,
+        BaseHTTPServer.HTTPServer):
     """Server to serve directory as a playlist"""
 
     ok_errnos = [
